@@ -1,4 +1,4 @@
-Name,Lat,Lng,Max Temp,Humidity,Cloudiness,Wind Speed,Country,Date
+City,Lat,Lng,Max Temp,Humidity,Cloudiness,Wind Speed,Country,Date
 New Norfolk,-42.7826,147.0587,53.58,89,100,1.34,AU,1623718407
 Rikitea,-23.1203,-134.9692,75.06,81,100,12.41,PF,1623718408
 Port Hawkesbury,45.6169,-61.3485,53.73,95,90,5.99,CA,1623718409
