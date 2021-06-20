@@ -5,6 +5,7 @@
 ### Task
 In this task we have been asked to answer the question "What's the weather like as we approach the equator?"
 
+The first part of the task is *Part 1: WeatherPy*. The details for this section are below.
 Using a random list of 500+ cities we need to use an API call to determine each cities weather. This API call needs to include a print log of each city as it's being processed with the city number and city name. The results then need to be saved to a csv file.
 
 Based on the city weather data a series of scatter plots are then generated as per below:
@@ -25,8 +26,39 @@ We are then required to run linear regression on the below pairs:
 
 An image of each plot is then saved into the out_data folder.
 
+The second part of this task is *Part 2: VacationPy*. The details for this section are below.
+
+Based on the cities.csv file created in part 1, we need to create a heatmap that displays each cities humidity.
+Next we narrow down the list of cities based on some weather parameters to find our ideal weather selection.
+A Google Places API is then used to find the first hotel for each city located within 5000 meters of the cities coordinates.
+The hotels are then plotted ontop of the heatmap and a pin is displays the Hotel Name, City and Country.
+
+
 ---
 ### Method
+
+Part 1: WeatherPy
+
+The code begins by generating a random list of cities from the citipy Python library. This code was prewritten and we simply required to run it.
+Note: I have inserted np.random.seed(11) at the top of the code so that I could get the same list of cities each time and not have to change my analysis results when completing the graphs. To get a new list of cities, simply remove the random.seed line. Please also note that this could result in cities with a greater humidity than 100 - these cities need to be dropped by there is no code to complete this step since it was not required for my cities list.
+
+Once the cities list is generated we are going to use the weather maps API and compile the weather data for each of the cities found. 
+For this section we start by establishing the url required to make the API call.
+We then create empty lists that will be filled by a for loop that goes through each city in the list and gets the data we have defined.
+
+The lists are populated with the below data:
+
+* The city name
+* The max temperature
+* The humidity
+* The cloudiness
+* The wind speed
+* The cities Country
+* The date
+* The latitude
+* The longitude
+
+
 
 
 ----
