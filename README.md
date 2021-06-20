@@ -129,12 +129,15 @@ Based on the analysis performed in the WeatherPy task the below observations hav
 This is evident in 3 graphs:
 
 * City Latitude vs. Max Temperature
+
 ![lat_temp](https://user-images.githubusercontent.com/82348616/122663077-4627f980-d1db-11eb-8b2b-507c7f80fb94.png)
 
 * Northern Hemisphere - Max Temp vs. Latitude
+
 ![northern_lat_temp](https://user-images.githubusercontent.com/82348616/122663079-4d4f0780-d1db-11eb-8b57-437d069890c5.png)
 
 * Southern Hemisphere - Max Temp vs. Latitude
+
 ![southern_lat_temp](https://user-images.githubusercontent.com/82348616/122663082-5213bb80-d1db-11eb-8d12-4dd8ae0fb923.png)
 
 This observation makes sense since the equator is closer to the sun and receive the most direct sunlight. Latitudes closer to north or south pole receive less direct sun which results in a lower temperature.
