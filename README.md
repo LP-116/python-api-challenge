@@ -124,7 +124,7 @@ Note: For further detail regarding the code was written and used, please refer t
 
 Based on the analysis performed in the WeatherPy task the below observations have been made:
 
-1.The closer the city is to the equator the warmer the temperature is. 
+**Observation 1:** The closer the city is to the equator the warmer the temperature is. 
 
 This is evident in 3 graphs:
 
@@ -142,14 +142,14 @@ This is evident in 3 graphs:
 
 This observation makes sense since the equator is closer to the sun and receive the most direct sunlight. Latitudes closer to north or south pole receive less direct sun which results in a lower temperature.
 
-2.After reviewing the graphs on wind speed no clear correlation between latitude and wind speed can be made. 
+**Observation 2:** After reviewing the graphs on wind speed no clear correlation between latitude and wind speed can be made. 
 
 ![lat_wind](https://user-images.githubusercontent.com/82348616/122663099-6f488a00-d1db-11eb-9c68-54fe657e1ea0.png)
 
 The plot points are very diverse and can have very different results with similar latitudes. Upon investigation the fact that there is no clear correlation makes sense since wind speed is determined by the air change between two pressure areas - the greater the pressure change the greater the wind speed. (source: Barber, David. (2021, June 20). The Four Forces That Influence Wind Speed & Wind Direction. sciencing.com. Retrieved from https://sciencing.com/list-7651707-four-wind-speed-wind-direction.html)
 
 
-3.When comparing the "Northern Hemisphere - Max Temp" graph against the "Southern Hemisphere - Max Temp" graph, it appears that the Northern hemisphere has higher temperature in general than the Southern hemisphere. The Northern temperatures go up to 110 degrees fahrenheit whereas the Southern hemisphere temperatures only go up to 90 degrees fahrenheit. However, it is important to note that there are less cities in our data from the Southern hemisphere and therefore we would need more data before confirming this conclusion.
+**Obeservation 3:** When comparing the "Northern Hemisphere - Max Temp" graph against the "Southern Hemisphere - Max Temp" graph, it appears that the Northern hemisphere has higher temperature in general than the Southern hemisphere. The Northern temperatures go up to 110 degrees fahrenheit whereas the Southern hemisphere temperatures only go up to 90 degrees fahrenheit. However, it is important to note that there are less cities in our data from the Southern hemisphere and therefore we would need more data before confirming this conclusion.
 
 Upon investigation, it appears that the Southern hemisphere is warmer than the northern hemisphere because there is less land in the Southern hemisphere and more water. Water retains heat and results in the Southern hemisphere having a warmer climate. This further reinforces that we require more data before we can draw conclusions beyond the scope of the cities in our selection. (source: E, Phillip. (2016, Jan 27). Why is the southern hemisphere warmer than the northern? /socratic.org. Retrieved from https://socratic.org/questions/why-is-the-southern-hemisphere-warmer-than-the-northern#217714)
 
