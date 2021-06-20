@@ -124,7 +124,9 @@ Note: For further detail regarding the code was written and used, please refer t
 
 Based on the analysis performed in the WeatherPy task the below observations have been made:
 
-1. The closer the city is to the equator the warmer the temperature is. This is evident in 3 graphs:
+1. The closer the city is to the equator the warmer the temperature is. 
+
+This is evident in 3 graphs:
 
 * City Latitude vs. Max Temperature
 ![lat_temp](https://user-images.githubusercontent.com/82348616/122663077-4627f980-d1db-11eb-8b2b-507c7f80fb94.png)
