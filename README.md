@@ -3,6 +3,7 @@
 
 ---
 ### Task
+
 In this task we have been asked to answer the question "What's the weather like as we approach the equator?"
 
 The first part of the task is *Part 1: WeatherPy*. The details for this section are below.
@@ -37,7 +38,7 @@ The hotels are then plotted ontop of the heatmap and a pin is displays the Hotel
 ---
 ### Method
 
-Part 1: WeatherPy
+#### Part 1: WeatherPy
 
 The code begins by generating a random list of cities from the citipy Python library. This code was prewritten and we simply required to run it.
 Note: I have inserted np.random.seed(11) at the top of the code so that I could get the same list of cities each time and not have to change my analysis results when completing the graphs. To get a new list of cities, simply remove the random.seed line. Please also note that this could result in cities with a greater humidity than 100 - these cities need to be dropped by there is no code to complete this step since it was not required for my cities list.
@@ -94,13 +95,58 @@ Once the function has been defined we simply need to call it for each graph and 
 
 Again, each graph has a small observation written below - please refer to the notebook for these comments.
 
+Note: For further detail regarding the code was written and used, please refer to the comments within the WeatherPy jupyter notebook.
 
+#### Part 2: VacationPy
 
+For the second part of this task we start by loading the cities.csv file from part 1. Then using the google maps API we create a heatmap that displays the humidity in each of the cities. 
 
+To do this we define the heat layer of the map using the latitude and longitude as the locations and the humidity data for the weight. 
+We then add this heat layer to the gmaps figure.
+
+![Heat map 1](https://user-images.githubusercontent.com/82348616/122662814-5212bc00-d1d9-11eb-9ac6-4cdc600c6898.png)
+
+We then create a new dataframe based on ideal weather conditions that we define using the .loc method.
+This returned a total of 6 cities. A new dataframe called hotel_df is then defined that shows the city, lat, lng, country and a new blank column for hotel name.
+
+A new API call is then made to find the closest hotel to each of the cities in the hotel_df based on some defined parameters (stored as a dictionary). To start this the iterrows method is used on the hotel_df. Using the lat and lng data for the row, the location details are added to the parameters dictionary. We then get the data required by using the google maps url, applying our parameters to the search and then using .json
+
+Each row is looked up and the name of the closest hotel is added to the hotel_df. If no hotel is found with the parameters the code will print "No hotel found.." and will skip that city.
+
+Markers for each hotel are then added to the gmap and each marker contains the Hotel name, city name and country.
+
+![Heatmap 3](https://user-images.githubusercontent.com/82348616/122662923-14faf980-d1da-11eb-81fe-90ffdc502773.PNG)
+
+Note: For further detail regarding the code was written and used, please refer to the comments within the VacationPy jupyter notebook.
 
 ----
 ### Results
 
+Based on the analysis performed in the WeatherPy task the below observations have been made:
+
+1. The closer the city is to the equator the warmer the temperature is. This is evident in 3 graphs:
+
+* City Latitude vs. Max Temperature
+![lat_temp](https://user-images.githubusercontent.com/82348616/122663077-4627f980-d1db-11eb-8b2b-507c7f80fb94.png)
+
+* Northern Hemisphere - Max Temp vs. Latitude
+![northern_lat_temp](https://user-images.githubusercontent.com/82348616/122663079-4d4f0780-d1db-11eb-8b57-437d069890c5.png)
+
+* Southern Hemisphere - Max Temp vs. Latitude
+![southern_lat_temp](https://user-images.githubusercontent.com/82348616/122663082-5213bb80-d1db-11eb-8d12-4dd8ae0fb923.png)
+
+This observation makes sense since the equator is closer to the sun and receive the most direct sunlight. Latitudes closer to north or south pole receive less direct sun which results in a lower temperature.
+
+2. After reviewing the graphs on wind speed no clear correlation between latitude and wind speed can be made. 
+
+![lat_wind](https://user-images.githubusercontent.com/82348616/122663099-6f488a00-d1db-11eb-9c68-54fe657e1ea0.png)
+
+The plot points are very diverse and can have very different results with similar latitudes. Upon investigation the fact that there is no clear correlation makes sense since wind speed is determined by the air change between two pressure areas - the greater the pressure change the greater the wind speed. (source: Barber, David. (2021, June 20). The Four Forces That Influence Wind Speed & Wind Direction. sciencing.com. Retrieved from https://sciencing.com/list-7651707-four-wind-speed-wind-direction.html)
+
+
+3. When comparing the "Northern Hemisphere - Max Temp" graph against the "Southern Hemisphere - Max Temp" graph, it appears that the Northern hemisphere has higher temperature in general than the Southern hemisphere. The Northern temperatures go up to 110 degrees fahrenheit whereas the Southern hemisphere temperatures only go up to 90 degrees fahrenheit. However, it is important to note that there are less cities in our data from the Southern hemisphere and therefore we would need more data before confirming this conclusion.
+
+Upon investigation, it appears that the Southern hemisphere is warmer than the northern hemisphere because there is less land in the Southern hemisphere and more water. Water retains heat and results in the Southern hemisphere having a warmer climate. This further reinforces that we require more data before we can draw conclusions beyond the scope of the cities in our selection. (source: E, Phillip. (2016, Jan 27). Why is the southern hemisphere warmer than the northern? /socratic.org. Retrieved from https://socratic.org/questions/why-is-the-southern-hemisphere-warmer-than-the-northern#217714)
 
 
 ----
