@@ -58,6 +58,43 @@ The lists are populated with the below data:
 * The latitude
 * The longitude
 
+The populate the list we use the .append() method and pull data for the .json request we did with the url for each city.
+Next we set the counter for the print log. We have been asked to print in groups of 50 therefore we start with a "counter" starting at one and a "set" starting at 1.
+Each time the loop is performed 1 gets added to the counter total. Once this counter is above 49 (i.e. 50), it is reset back to 1. Each time the counter resets back to 1, the set number gets increased by 1. If a city is not found it is simply skipped.
+
+A dataframe is then created based on the lists we established during the API call.
+This dataframe (titled weather_df) is then exported to the output_data folder in a csv file title "cities.csv"
+
+The weather_df is then inspected to determine if there are any cities with a humidity greater than 100. No cities were found matching the criteria in our dataframe.
+The .describe() method was then used to confirm the humidity max and it was 100.
+
+Scatter plots were then created based on the weather_df.
+
+To complete the graphs a number of methods were used including: 
+
+* plt. - to plot the data 
+* plt.xlabel & plt.ylabel - to label the x & y axis
+* plt.title - to add a title to the graph
+* plt.grid - to add a grid to the graph
+* plt.savefig - to save an image of the graph
+* plt.scatter - to plot the data
+* plt.show - to display the graph
+* .strftime and datetime.now() were also used to get the date the graphs were completed.
+
+Each graph has a small observation written below - please refer to the notebook for these comments.
+
+The data is then split into Northern and Southern hemisphere locations. To do this we used the .loc method on the dataframe and filter the latitude column above and below 0.
+
+Next we performed some linear regression modelling on the northern and southern hemisphere data.
+
+To complete the linear regression calculations I first defined a function to eliminate the need to repeat all the calculations for each graph. The function requires 4 different variables - the x values, y values, the coordinates you want the line equation to be (l1 & l2) and the graph colour.
+The function then details the calculations required for the linear regression.
+
+Once the function has been defined we simply need to call it for each graph and input the variables.
+
+Again, each graph has a small observation written below - please refer to the notebook for these comments.
+
+
 
 
 
