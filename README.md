@@ -156,6 +156,8 @@ Upon investigation, it appears that the Southern hemisphere is warmer than the n
 
 ----
 ### Files
+To run the files or view the scripts please use the WeatherPy.ipynb file in the WeatherPy folder and the VacationPy.ipynb file in the VacationPy folder. 
+Please run these in jupyter notebook.
 
 Please note you will need 2 API key's to run this code:
 1. An Open weather API key (https://openweathermap.org/api)
