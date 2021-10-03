@@ -1,5 +1,5 @@
 # Python API Challenge
-## Python API Homework - What's the Weather Like?
+## What's the Weather Like?
 
 ---
 ### Task
@@ -99,7 +99,7 @@ Note: For further detail regarding the code was written and used, please refer t
 
 #### Part 2: VacationPy
 
-For the second part of this task we start by loading the cities.csv file from part 1. Then using the google maps API we create a heatmap that displays the humidity in each of the cities. 
+  For the second part of this task we start by loading the cities.csv file from part 1. Then using the google maps API we create a heatmap that displays the humidity in each of the cities. 
 
 To do this we define the heat layer of the map using the latitude and longitude as the locations and the humidity data for the weight. 
 We then add this heat layer to the gmaps figure.
